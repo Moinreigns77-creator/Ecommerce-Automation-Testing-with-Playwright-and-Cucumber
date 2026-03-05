@@ -13,6 +13,7 @@ class RegisterPage {
         this.nameInput = this.page.locator("[data-qa='signup-name']");
         this.emailInput = this.page.locator("[data-qa='signup-email']");
         this.signupButton = this.page.locator("[data-qa='signup-button']")
+        this.signupErrorMsg = this.page.locator("p:has-text('Email Address already exist!')")
 
         //Account Information
         this.accountInfoHeading = this.page.locator("h2:has-text('Enter Account Information')");
@@ -45,6 +46,8 @@ class RegisterPage {
         this.accountCreatedStatus = this.page.locator("h2[data-qa='account-created']");
         this.continueButton = this.page.locator("a[data-qa='continue-button']");
         this.loggedInAsLabel = name => this.page.locator(`//a[contains(normalize-space(),'Logged in as ${name}')]`)
+
+
     }
 
     async navigateToHome(url) {
@@ -63,6 +66,14 @@ class RegisterPage {
         await this.signupButton.click();
         await expect(this.accountInfoHeading).toBeVisible();
     }
+
+    async submitBasicSignupformWithExistingEmail(name, email) {
+        await this.nameInput.fill(name);
+        await this.emailInput.fill(email);
+        await this.signupButton.click();
+        await expect(this.signupErrorMsg).toBeVisible();
+    }
+
 
     async fillAccountInformation(title, password, dob, address) {
         if (this.titleRadio[title]) {
