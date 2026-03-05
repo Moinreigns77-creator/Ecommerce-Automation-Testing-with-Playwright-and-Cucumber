@@ -1,4 +1,4 @@
-Feature: User Registration
+Feature: User Registration 
 
     Scenario: User registers with valid credentials
         Given I launch the application
