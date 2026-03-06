@@ -21,5 +21,28 @@
             "zipcode": "515201",
             "mobile": "7730166123"
         }
+    },
+    "RegisterDataAndDelete": {
+        "name": "Moin",
+        "email": "Moin5@gmail.com",
+        "title": "Mr.",
+        "password": "Moin@123",
+        "dob": {
+            "day": "22",
+            "month": "April",
+            "year": "2003"
+        },
+        "address": {
+            "firstname": "Mohammad",
+            "lastname": "Moen",
+            "company": "SAI360",
+            "address1": "Bondi",
+            "address2": "Inner City",
+            "country": "Australia",
+            "state": "Victoria",
+            "city": "Sydney",
+            "zipcode": "515201",
+            "mobile": "7730166123"
+        }
     }
 }

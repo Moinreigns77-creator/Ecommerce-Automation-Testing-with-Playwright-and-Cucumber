@@ -45,7 +45,6 @@ class RegisterPage {
         //Post Registration
         this.accountCreatedStatus = this.page.locator("h2[data-qa='account-created']");
         this.continueButton = this.page.locator("a[data-qa='continue-button']");
-        this.loggedInAsLabel = name => this.page.locator(`//a[contains(normalize-space(),'Logged in as ${name}')]`)
 
 
     }
@@ -106,10 +105,7 @@ class RegisterPage {
         await this.continueButton.click();
     }
 
-    async verifyLogin(name) {
-        await expect(this.loggedInAsLabel(name)).toBeVisible();
-    }
 
 }
 
-module.exports = { RegisterPage }
+module.exports = RegisterPage 
