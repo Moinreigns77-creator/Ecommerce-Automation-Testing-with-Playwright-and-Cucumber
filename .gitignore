@@ -8,3 +8,5 @@ node_modules/
 /playwright/.auth/
 example.js
 example2.js
+Structure.txt
+tests/example.spec.js

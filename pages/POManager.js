@@ -1,6 +1,6 @@
 const RegisterPage = require("./RegisterPage");
 const LoginPage = require("./LoginPage")
-const HomePage = require("./HomePage")
+const DashboardPage = require("./DashboardPage")
  class POManager {
 
     constructor(page) {
@@ -19,8 +19,8 @@ const HomePage = require("./HomePage")
         return new LoginPage(this.page);
     }
 
-    getHomePage(){
-        return new HomePage(this.page);
+    getDashboardPage(){
+        return new DashboardPage(this.page);
     }
 }
 

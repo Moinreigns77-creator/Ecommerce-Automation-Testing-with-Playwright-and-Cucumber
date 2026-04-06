@@ -12,8 +12,8 @@ Feature: User Registration
         When I navigate to register page
         When I fill the basic register form with existing email "Moin2@gmail.com" and name "Moin" and I should see an error message
 
-    @Only
-    Scenario: Register user with credentials and validate login and delete the user account
+    
+    Scenario: Register user with valid credentials and validate login and delete the user account
         Given I launch the application to register
         When I navigate to register page
         And I fill in the register form with valid details

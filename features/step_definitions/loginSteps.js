@@ -19,8 +19,8 @@ When('I enter the email {string} and password {string}', { timeout: 15 * 1000 },
 //? Then I should be logged as username "Moin"
 Then('I should be logged in as username {string}', { timeout: 15 * 1000 }, async function (name) {
     // await this.loginPage.verifyValidLogin(name)
-    this.homePage = await this.poManager.getHomePage();
-    await this.homePage.verifyLogin(name);
+    this.dashboardPage = await this.poManager.getDashboardPage();
+    await this.dashboardPage.verifyLogin(name);
 });
 
 Then('I should the error message', { timeout: 15 * 1000 }, async function () {
@@ -28,6 +28,5 @@ Then('I should the error message', { timeout: 15 * 1000 }, async function () {
 })
 
 When('I click on logout button and I should be logged out of the application', { timeout: 15 * 1000 }, async function () {
-    this.homePage = await this.poManager.getHomePage();
-    await this.homePage.logoutUser();
+    await this.dashboardPage.logoutUser();
 });

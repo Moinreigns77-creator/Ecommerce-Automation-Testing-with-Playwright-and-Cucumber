@@ -2,6 +2,7 @@
   "name": "automationexercisecucumber",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {},
   "keywords": [],
   "author": "",
@@ -11,5 +12,8 @@
     "@cucumber/cucumber": "^12.7.0",
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.3.3"
+  },
+  "dependencies": {
+    "allure-playwright": "^3.6.0"
   }
 }
