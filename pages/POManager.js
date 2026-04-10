@@ -1,26 +1,31 @@
 const RegisterPage = require("./RegisterPage");
 const LoginPage = require("./LoginPage")
 const DashboardPage = require("./DashboardPage")
- class POManager {
+const ProductPage = require("./ProductPage")
+class POManager {
 
     constructor(page) {
         this.page = page;
     }
 
-   async launchApplication(url){
-    await this.page.goto(url);
+    async launchApplication(url) {
+        await this.page.goto(url);
     }
 
     getRegisterPage() {
         return new RegisterPage(this.page);
     }
 
-    getLoginPage(){
+    getLoginPage() {
         return new LoginPage(this.page);
     }
 
-    getDashboardPage(){
+    getDashboardPage() {
         return new DashboardPage(this.page);
+    }
+
+    getProductPage() {
+        return new ProductPage(this.page);
     }
 }
 

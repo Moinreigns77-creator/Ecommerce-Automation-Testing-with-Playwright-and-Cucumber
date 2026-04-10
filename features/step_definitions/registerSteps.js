@@ -1,14 +1,7 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
 const { RegisterData,RegisterDataAndDelete } = require("../../data/registerData.json")
 
-//*Scenario: User registers with valid credentials
-Given('I launch the application to register', { timeout: 15 * 1000 }, async function () {
-
-    this.registerPage = this.poManager.getRegisterPage();
-    await this.poManager.launchApplication("https://automationexercise.com/");
-
-});
-
+//!Scenario: User registers with valid credentials
 When('I navigate to register page', { timeout: 15 * 1000 }, async function () {
 
     await this.registerPage.gotoRegistrationForm();
@@ -31,7 +24,7 @@ Then('I should be logged into the application', { timeout: 15 * 1000 }, async fu
     await this.homePage.verifyLogin(RegisterData.name);
 });
 
-//* Scenario: User register with existing email
+//! Scenario: User register with existing email
 When('I fill the basic register form with existing email {string} and name {string} and I should see an error message', { timeout: 15 * 1000 }, async function (email, name) {
     await this.registerPage.submitBasicSignupformWithExistingEmail(name, email);
 });

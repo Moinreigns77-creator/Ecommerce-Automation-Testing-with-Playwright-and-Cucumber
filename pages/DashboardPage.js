@@ -23,8 +23,7 @@ class DashboardPage {
         this.messgaeTextarea = this.page.locator("#message");
         this.fileButton = this.page.locator("[name='upload_file']");
         this.submitButton = this.page.locator("[data-qa='submit-button']");
-        this.successStatusMsg - this.page.locator(".status.alert-success");
-        this.homeButton = this.page.locator("span:has-text('Home')");
+    
 
 
 
