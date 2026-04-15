@@ -14,3 +14,8 @@ Feature: Dashboard functionalities
     Scenario: Verify Test Cases Page
         When I navigate to Test cases Page
         Then I should see the Test Cases Title
+
+    
+    Scenario:  Verify Subscription in home page
+        When I enter the email "moin@gmail.com" in the field and clicked Subscription button
+        Then I should see the success status

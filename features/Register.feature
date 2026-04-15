@@ -13,7 +13,7 @@ Feature: User Registration
 
     Scenario: Register user with valid credentials and validate login and delete the user account
         When I navigate to register page
-        And I fill in the register form with valid details
+        And I fill in the register form with valid details to delete
         Then I should see a confirmation message and I click the continue button
         Then I should be logged into the application
         When I click on delete user button and I should see account delete status and click continue to reach homepage

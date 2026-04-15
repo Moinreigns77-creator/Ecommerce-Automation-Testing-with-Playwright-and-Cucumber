@@ -27,3 +27,16 @@ When('I navigate to Test cases Page', { timeout: 15 * 1000 }, async function () 
 Then('I should see the Test Cases Title', { timeout: 15 * 1000 }, async function () {
         await expect(this.page.locator("//b[normalize-space()='Test Cases']")).toBeVisible();
 });
+
+
+
+//*Scenario:  Verify Subscription in home page
+When('I enter the email {string} in the field and clicked Subscription button', { timeout: 15 * 1000 }, async function (email) {
+        await expect(this.page.locator(".single-widget h2")).toBeVisible();
+        await this.page.locator("#susbscribe_email").fill(email);
+        await this.page.locator("#subscribe").click();
+});
+
+Then('I should see the success status', { timeout: 15 * 1000 }, async function () {
+        await expect(this.page.locator("#success-subscribe")).toBeVisible();
+});

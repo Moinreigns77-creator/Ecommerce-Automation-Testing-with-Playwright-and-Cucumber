@@ -2,7 +2,7 @@ const { Before, After, Given } = require("@cucumber/cucumber");
 const { chromium, webkit, firefox ,expect} = require("@playwright/test");
 const POManager = require("../../pages/POManager");
 
-Before(async function () {
+Before({timeout:30*1000},async function () {
     const browser = await chromium.launch({ headless: false });
     const context = await browser.newContext();
     this.page = await context.newPage();

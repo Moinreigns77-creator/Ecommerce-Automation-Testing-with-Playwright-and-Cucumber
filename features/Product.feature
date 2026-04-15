@@ -11,7 +11,7 @@ Feature: Product page
             | condition    | New          |
             | brand        | Polo         |
 
-    @only
+    
     Scenario: Search product in the products page
         When I navigate to products page and verify ALL PRODUCTS is visible
         When I search for the "Jeans" product
